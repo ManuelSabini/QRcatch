@@ -1,0 +1,25 @@
+Ejemplo: <img src="https://qrcode.tec-it.com/API/QRCode?data=Generador+de+C%c3%b3digos+QR+de+TEC-IT&backcolor=%23ffffff" />
+https://qrcode.tec-it.com/es/Raw
+
+data
+Datos del código QR, codificados en HTML
+errorcorrection
+Nivel de corrección de errores: L (bajo), M (medio), Q (cuartil), o H (alto)
+color
+Código hexadecimal de color para el código de barras
+backcolor
+Código hexadecimal de color para el fondo
+istransparent
+Transparencia del fondo: true (verdadero) o false (falso)
+quietzone
+Ancho del espacio en blanco alrededor del código de barras
+quietunit
+Unidad de medida para la zona muda: mm (por defecto), in (pulgadas), mil (milésimas de pulgada), mod (módulos) o px (píxeles)
+codepage
+Página de códigos utilizada para codificar los datos. Seleccione entre UTF8 (por defecto), CYRILIC (Cirílico) y ANSI
+dpi
+Resolución (PPP - puntos por pulgada) de la imagen del código de barras [96..600]
+size
+Tamaño del código de barras: small (pequeño), medium (mediano) o large (grande)
+method
+Método utilizado para obtener el código de barras creado (PNG): BASE64 (Matriz de bytes BASE64 para llamadas AJAX), Image (Imagen) o Download (Descarga)
