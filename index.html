@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
+    
 </head>
-<body class="container tamaño-mediano">
+<body class="container tamaño-pequeño">
     <header class="row text-center">
         <!-- Logo -->
         <div class="logo miniatura col-2" id="logo">
@@ -24,23 +25,19 @@
         </div>
         <!-- Configuracion -->
         <div id="nombreExtencion" class="miniatura col-2">
-            <span class="material-symbols-outlined">settings</span>
+            <!-- <span class="material-symbols-outlined">settings</span> --> <!-- Desabilitado, hasta que este desarrollada la capura automatica desde la pantalla -->
         </div>
     </header>
     <main class="row justify-content-center">
-        <div class="col-10 codigoBarrasoQr  ">
-<!--                 <img src="https://barcode.tec-it.com/barcode.ashx?data=Tresjbkadkghbklabdvkbkadbvkbakdsvkabdkvbkabdsjadjgodajtcwentoiuetinuovtuniovatwwthntwchcahnachapxupe%C3%B1iax%C3%B1g+acgagcrcaoiwihacgrohhancurhuocaghunogachunagwxhunxagwhuxahgnwuaxgwaxuhgwuhlxagwhulgawxuhliewaguhiawxhhiuawxehuiaxgwhuiagxwhiawxghagxwehiaxeihaegxwhaxewghaxew&code=QRCode&translate-esc=true&eclevel=L" alt="QRcode" id="codigo"> -->
-                <img src="https://barcode.tec-it.com/barcode.ashx?data=123456789012345678901234567890123456789&code=Code128&translate-esc=true&dpi=300&imagetype=Png" alt="QRcode" id="codigo">
-        </div>
     </main>
     <set class="row">  
         <div class="input-group input-group-sm">
-            <input type="text" class="form-control " placeholder="Valor" aria-label="input valores" aria-describedby="button-addon2">
-            <button class="btn btn-outline-success" type="button" id="button-addon2 boton_generar">Generar</button>
+            <input type="text" class="form-control " placeholder="Ingrese un Valor" aria-label="input valores" aria-describedby="button-addon2" id="valor">
+            <button class="btn btn-outline-success" type="button" id="button-addon2" type="sumbit">Generar</button>
         </div>  
         <label for="selectorFormato" class="form-label col-2">Formato:</label>
         <div class="selector col-4">
-            <select class="form-select form-select-sm" aria-label="Default select example" id="valor"> 
+            <select class="form-select form-select-sm" aria-label="Default" id="selectorFormato"> 
                 <option selected value="qrcode">QR</option>
                 <option value="code128">Code-128</option>
             </select>
@@ -49,7 +46,7 @@
         <div class="selector col-4">
             <select class="form-select form-select-sm" aria-label="Default select example" id="selectorTamaño">
                 <option selected value="tamaño-pequeño">Pequeño</option>
-                <option value="tamaño-medium">Mediano</option>
+                <option value="tamaño-mediano">Mediano</option>
                 <option value="tamaño-grande">Grande</option>
             </select>
         </div>
