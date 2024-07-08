@@ -11,5 +11,11 @@
         "default_popup": "./index.html"
     },
     "permissions": [
-    ]
+        "activeTab",
+        "clipboard-read",
+        "clipboard-write"
+    ],
+    "background": {
+        "scripts": ["captura_gsheets.js"]
+    }
 }

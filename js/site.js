@@ -1,9 +1,21 @@
 function iniciarListeners(){
     /* Boton Generar */
-    botonGenerar = document.querySelector("#button-addon2");
+    botonGenerar = document.querySelector("#button-generar");
     botonGenerar.addEventListener("click", (e)=> {
         console.log("Se preciono el boton Generar");
         capturaDeDatos()
+    })
+    /* Boton Pegar */
+    botonPegar = document.querySelector("#button-pegar");
+    botonPegar.addEventListener("click", (e)=> {
+        console.log("Se preciono el boton pegar");
+        leerDelPortapapeles()
+    })
+    /* Boton Borrar */
+    botonBorrar = document.querySelector("#button-borrar");
+    botonBorrar.addEventListener("click", (e)=> {
+        console.log("Se preciono el boton borrar");
+        limpiarValor()
     })
 }
 
@@ -46,9 +58,29 @@ function insercionCodigo(valor, formato){
     console.log(`Se genero el codigo. Formato: ${formato}. Valores Generados: ${valor}`)
 }
 
+async function leerDelPortapapeles(){
+    try{
+        const textoPortapapeles = await navigator.clipboard.readText();
+        console.log("Texto en Portapapeles: "+textoPortapapeles);
+        document.querySelector("#valor").value = textoPortapapeles ;
+    } catch (error){
+        console.log(error)
+    }
+}
+
+function limpiarValor(){
+    valor = document.querySelector("#valor")
+    if (valor) {
+        valor.value="";
+    }else{
+        console.log("El campo valor esta vacio, no se pudo borrar")
+    }
+}
 
 //Inicia la Ejecucion
 let botonGenerar;
+let botonPegar;
+let botonBorrar;
 let tamaño;
 let formato;
 let valor;
