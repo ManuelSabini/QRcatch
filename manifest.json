@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "name": "QRcatch",
-    "version": "1.0.0",
-    "description": "Extencion para generar QRs y codigos de barras",
+    "version": "1.2.0",
+    "description": "Extención para generar QRs y codigos de barras",
     "author": "Manuel Sabini",
     "icons": {  
         "128": "./assets/img/QRcatch_icon.png"
@@ -12,10 +12,7 @@
     },
     "permissions": [
         "activeTab",
-        "clipboard-read",
-        "clipboard-write"
-    ],
-    "background": {
-        "scripts": ["captura_gsheets.js"]
-    }
+        "clipboardRead",
+        "clipboardWrite"
+    ]
 }
