@@ -64,3 +64,7 @@ main{
     padding-top: 6px;
     text-align:end;
 }
+
+.botonDescargar{
+    display: none;
+}
